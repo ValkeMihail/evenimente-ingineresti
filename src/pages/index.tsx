@@ -38,14 +38,11 @@ type HomeProps = {
 export default function Home(
   {events} : HomeProps
   ) {
-  
     const sortedEventsByDate = events.sort((a : any, b : any) => {
       return new Date(a.fields.startDateAndTime as string).getTime() - new Date(b.fields.startDateAndTime as string).getTime()
     })
-
     const upcomingEvent = sortedEventsByDate[0]
     const restOfEvents = sortedEventsByDate.slice(1)
-  
   return (
     <>
       <Head>

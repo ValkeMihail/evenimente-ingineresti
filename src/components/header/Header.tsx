@@ -22,7 +22,7 @@ const Header = (
   useEffect(() => {
 
 
-    const updateCounter = () => {
+    const updateCounter : any = () => {
       const currentDate = new Date();
       const startDate = new Date(upcomingEvent.fields.startDateAndTime)
       const timeDifference = startDate.getTime() - currentDate.getTime();
@@ -52,10 +52,11 @@ const Header = (
       <div className={styles.headerLeft}>
         <Image
           className={styles.nextEventImage}
-          width={900}
-          height={600}
+          width={450}
+          height={550}
+          priority={true}
           alt="Next Event"
-          src={upcomingEvent.fields.eventPhoto.fields.file.url ? "http://"+upcomingEvent.fields.eventPhoto.fields.file.url : eventPlaceholder}
+          src={upcomingEvent.fields.eventPhoto.fields.file.url ? "https://"+upcomingEvent.fields.eventPhoto.fields.file.url : eventPlaceholder}
         />
       </div>
       <div className={styles.headerRight}>
@@ -100,9 +101,9 @@ const Header = (
                       return (
                         <div key={speaker.fields.file.url} className={styles.speakerWrap}>
                           <Image
-                            src={speaker.fields.file.url ? "http://"+speaker.fields.file.url : user1}
-                            width={50}
-                            height={50}
+                            src={speaker.fields.file.url ? "https://"+speaker.fields.file.url : user1}
+                            width={20} 
+                            height={20}
                             alt="speaker"
                           />
                         </div>
