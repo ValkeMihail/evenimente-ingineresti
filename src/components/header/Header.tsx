@@ -52,11 +52,11 @@ const Header = (
       <div className={styles.headerLeft}>
         <Image
           className={styles.nextEventImage}
-          width={450}
-          height={550}
+          width={490}
+          height={300}
           priority={true}
           alt="Next Event"
-          src={upcomingEvent.fields.eventPhoto.fields.file.url ? "https://"+upcomingEvent.fields.eventPhoto.fields.file.url : eventPlaceholder}
+          src={upcomingEvent.fields.eventPhoto.fields.file.url ? "https:"+upcomingEvent.fields.eventPhoto.fields.file.url : eventPlaceholder}
         />
       </div>
       <div className={styles.headerRight}>
@@ -101,7 +101,7 @@ const Header = (
                       return (
                         <div key={speaker.fields.file.url} className={styles.speakerWrap}>
                           <Image
-                            src={speaker.fields.file.url ? "https://"+speaker.fields.file.url : user1}
+                            src={speaker.fields.file.url ? "https:"+speaker.fields.file.url : user1}
                             width={20} 
                             height={20}
                             alt="speaker"
