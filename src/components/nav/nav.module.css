@@ -1,0 +1,31 @@
+.nav{
+  width: 90vw;
+  font-family: "Major Mono Display" , sans-serif;
+}
+
+.ul{
+  list-style: none;
+  display: flex;
+  font-size: 2vw;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 2vh;
+  width: 100%;
+}
+
+
+.li:hover{
+  color:#33333399;
+  
+  display: block;
+  margin: 0;
+}
+
+
+@media  screen and (max-width: 800px) {
+  .ul{
+    font-size: 4vw;
+  }
+}

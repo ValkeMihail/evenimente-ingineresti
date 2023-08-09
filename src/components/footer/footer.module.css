@@ -1,0 +1,250 @@
+.aboutContainer{
+  display: flex;  
+  font-family: "Roboto Condensed" , sans-serif;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin-bottom: 5rem;
+  font-size: 1.3rem;
+  height: 40rem;
+
+}
+
+.aboutHeading{
+  margin-top: 5rem;
+  align-self: flex-start;
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-family: "Major Mono Display" , sans-serif;
+}
+
+.aboutDescription{
+  height: 100%;
+  width: 50%;
+}
+
+.aboutImage{
+  height: 100%;
+  width: 50%;
+}
+
+
+.aboutImage img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.footer{
+  width: 90%;
+  height: 40rem !important;
+  color: #333 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  background: #333;
+}
+
+
+.form input{
+  width: 80%;
+  height: 15%;
+  margin: 1rem;
+  border: 0.1vw solid white;
+  border-radius: 1vh;
+  font-family: "Roboto Condensed" , sans-serif;
+
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.form textarea {
+  width: 80%;
+  height: 40%;
+
+  resize: none;
+  margin: 1rem;
+  font-family: "Roboto Condensed" , sans-serif;
+
+  border: 0.1vw solid white;
+  border-radius: 1vh;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  font-size: 1.2vw;
+}
+
+
+
+.socialButtons{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.socialButton {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 1vh;
+  border: 0.1vw solid white;
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.socialButton img {
+  width: 2vw;
+  height: 2vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialButton img:hover {
+  width: 2.2vw;
+  height: 2.2vw;
+  cursor: pointer;
+}
+.socialButton:hover {
+  background: #33333310;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+} 
+
+.submitButton{
+  height: 8rem;
+  font-family: "Roboto Condensed" , sans-serif;
+  transition: all 0.2s ease-in-out;
+  width: 30%;
+  margin-top: 2rem;
+}
+
+.submitButton:hover {
+  background: #333;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 0.1vw solid white;
+}
+
+
+@media  screen and (max-width: 800px) {
+  .aboutHeading{
+    font-size: 4vh; 
+    margin-left: 2vw; 
+  }
+  .aboutContainer{
+    font-size: 2.3vh;
+    flex-direction: column;
+    height: 100%;
+  }
+  .aboutDescription{
+    width: 100%;
+    height: 50%;
+  }
+  .aboutDescription p {
+    margin: 2vh 4vh;
+    text-align: justify;
+  }
+
+  .aboutImage{
+    width: 100%;
+    height: 50%;
+  }
+
+  .form{
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .form input, .form textarea , .submitButton{
+    font-size: 2.5vh;
+  }
+
+  .socialButtons {
+    gap: 3rem !important;
+    margin-top: 5vh;
+  }
+  
+  .socialButtons img {
+    width: 4vh;
+    height: 4vh;  
+  }
+  .submitButton{
+    height: 8vh;
+    width: 50%;
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .aboutContainer{
+    height: 100%;
+    width: 100%;
+  }
+  .aboutDescription{
+    width: 50%;
+    height: 100%;
+
+    text-align: justify;
+  }
+
+  .aboutDescription p{
+    margin: 2vh 4vh;
+    text-align: justify;
+  }
+
+  .aboutImage{
+    width: 50%;
+    height: 100%;
+  }
+
+  .aboutImage img {
+    width: 100% !important;
+  }
+  .footer{
+    width: 100%;
+    height: 60rem;
+  }
+
+  .form{
+    width: 70%;
+    height: 100%;
+    margin-top: 2rem;
+   
+  }
+  .form input , .form textarea, .form button {
+    font-size: 2rem !important;
+  }
+
+  .form button {
+    height: 4rem !important;
+  }
+  .socialButtons{
+    width: 100%;
+  }
+  .socialButtons img{
+    width: 4rem;
+    height: 4rem;
+
+  }
+
+}
