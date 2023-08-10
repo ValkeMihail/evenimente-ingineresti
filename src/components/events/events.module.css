@@ -47,9 +47,23 @@
   overflow: hidden;
   border-radius: 2vh;
   font-size: 1rem !important;
-  height: 37rem;
+  height: 30rem;
 
 }
+
+.eventImage{
+  width: 100%;
+  height: 70% !important;
+  object-fit: cover;
+  margin : 0;
+}
+
+.cardDetails{
+  height: 30%;
+  width: 100%;
+
+}
+
 
 .eventCard img {
   object-fit: cover;
@@ -60,10 +74,14 @@
   padding: 0;
   font-weight: 400;
 }
+
+
 .eventCard p {
-  height: 4rem;
+  height: 1rem;
+  width: 90%;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;     
 }
 
 
@@ -111,7 +129,7 @@
   .eventCard{
     min-width: 80vw !important;
     width: 80vw !important;
-    height: 80%;
+    height: 70%;
     font-size: 2vh;
     margin: 0 2vh;
   }
