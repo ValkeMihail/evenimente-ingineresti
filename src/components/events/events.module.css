@@ -47,7 +47,7 @@
   overflow: hidden;
   border-radius: 2vh;
   font-size: 1rem !important;
-  height: 35rem;
+  height: 37rem;
 
 }
 
@@ -61,7 +61,7 @@
   font-weight: 400;
 }
 .eventCard p {
-  height: 6.2rem;
+  height: 4rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -86,12 +86,13 @@
 .arrow:hover{
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  transform: scale(1.5);
+  transform: scale(1.3);
 
 }
 
 .arrowContainer h4{
   margin-left: 1vw;
+  
   }
   
 
