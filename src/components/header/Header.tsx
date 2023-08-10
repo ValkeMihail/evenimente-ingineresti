@@ -7,10 +7,11 @@ import location from "@/assets/location.svg"
 import user1 from "@/assets/user1.png"
 import { useState, useEffect } from 'react'
 import { formatDateAndTime } from '@/helpers'
+import { EventType, Photo } from '../../../types'
 
 
 type HeaderProps = {
-  upcomingEvent : any
+  upcomingEvent : EventType
 }
 
 const Header = (
@@ -25,7 +26,7 @@ const Header = (
   useEffect(() => {
     setStartDate(formatDateAndTime(upcomingEvent.fields.startDateAndTime))
     setEndDate(formatDateAndTime(upcomingEvent.fields.endDateAndTime))
-    const updateCounter : any = () => {
+    const updateCounter = () => {
       const currentDate = new Date();
       const startDate = new Date(upcomingEvent.fields.startDateAndTime)
       const timeDifference = startDate.getTime() - currentDate.getTime();
@@ -99,7 +100,7 @@ const Header = (
               <h3>Invitați : </h3>
               <div className={styles.speakers}>                
                   {
-                    upcomingEvent.fields.participantsPhotos.map((speaker: any) => {
+                    upcomingEvent.fields.participantsPhotos.map((speaker: Photo) => {
                       return (
                         <div key={speaker.fields.file.url} className={styles.speakerWrap}>
                           <Image
