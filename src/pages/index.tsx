@@ -2,11 +2,11 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Navigation from '@/components/nav/Navigation'
 import Header from '@/components/header/Header'
-import Events from '@/components/events/Events'
 import Footer from '@/components/footer/Footer'
 import { client } from '@/client-api'
 import { GetStaticProps } from 'next'
-
+import { EventType } from '../../types'
+import Events from '@/components/events/Events'
 
 
 export const getStaticProps : GetStaticProps = async () => {
@@ -32,15 +32,15 @@ export const getStaticProps : GetStaticProps = async () => {
 }
 
 type HomeProps = {
-  events: any
+  events: EventType[]
 }
 
 
 export default function Home(
   {events} : HomeProps
   ) {
-    const sortedEventsByDate = events.sort((a : any, b : any) => {
-      return new Date(a.fields.startDateAndTime as string).getTime() - new Date(b.fields.startDateAndTime as string).getTime()
+    const sortedEventsByDate = events.sort((a : EventType, b : EventType) => {
+      return new Date(a.fields.startDateAndTime).getTime() - new Date(b.fields.startDateAndTime).getTime()
     })
     const upcomingEvent = sortedEventsByDate[0]
     const restOfEvents = sortedEventsByDate.slice(1)

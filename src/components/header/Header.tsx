@@ -23,8 +23,8 @@ const Header = (
 
 
   useEffect(() => {
-    setStartDate(formatDateAndTime(upcomingEvent.fields.startDateAndTime as string))
-    setEndDate(formatDateAndTime(upcomingEvent.fields.endDateAndTime as string))
+    setStartDate(formatDateAndTime(upcomingEvent.fields.startDateAndTime))
+    setEndDate(formatDateAndTime(upcomingEvent.fields.endDateAndTime))
     const updateCounter : any = () => {
       const currentDate = new Date();
       const startDate = new Date(upcomingEvent.fields.startDateAndTime)

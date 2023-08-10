@@ -1,9 +1,10 @@
 import styles from './events.module.css'
 import React from 'react'
 import Event from './Event'
+import { EventType } from '../../../types'
 
 type EventsProps = {
-  events: any
+  events: EventType[]
 }
 
 const Events = ({events} : EventsProps) => {
@@ -15,7 +16,7 @@ const Events = ({events} : EventsProps) => {
       Evenimente Viitoare
     </h1>
     <div className={styles.eventsSlider}>
-      { events.map((event: any) => {
+      { events.map((event: EventType) => {
           return (
             <Event
               event={event}

@@ -4,16 +4,17 @@ import Image from 'next/image'
 import { formatDateAndTime } from '@/helpers'
 import arrowDiagonal from '@/assets/arrowDiagonal.svg'
 import eventPlaceholder from '@/assets/eventPlaceholder.jpeg'
+import { EventType } from '../../../types'
 
 
-const Event = ({event} : {event : any}) => {
+const Event = ({event} : {event : EventType}) => {
 
   const [startDate , setStartDate] = React.useState('')
   const [endDate , setEndDate] = React.useState('')
 
   React.useEffect(() => {
-    setStartDate(formatDateAndTime(event.fields.startDateAndTime as string))
-    setEndDate(formatDateAndTime(event.fields.endDateAndTime as string))
+    setStartDate(formatDateAndTime(event.fields.startDateAndTime))
+    setEndDate(formatDateAndTime(event.fields.endDateAndTime))
   }, [])
 
 
@@ -32,9 +33,9 @@ const Event = ({event} : {event : any}) => {
         src={event.fields.eventPhoto?.fields.file.url ? ("https:" + event.fields.eventPhoto.fields.file.url) : eventPlaceholder}
       />
       <div className={styles.cardDetails}>
-        <h2 className={styles.cardTitle}>{event.fields.title as string}</h2>
+        <h2 className={styles.cardTitle}>{event.fields.title}</h2>
         <p className={styles.cardDescription}>
-          {event.fields.description as string}
+          {event.fields.description}
         </p>
       </div>
       <div className={styles.arrowContainer}>
@@ -42,7 +43,7 @@ const Event = ({event} : {event : any}) => {
           {startDate ? startDate : event.fields.startDateAndTime} - {endDate ? endDate : event.fields.endDateAndTime}
         </h4>
         <h4>
-          {event.fields.city as string} , {event.fields.country as string}
+          {event.fields.city} , {event.fields.country}
         </h4>
         <Image
           width={4}
