@@ -5,11 +5,11 @@ import Header from '@/components/header/Header'
 import Events from '@/components/events/Events'
 import Footer from '@/components/footer/Footer'
 import { client } from '@/client-api'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 
 
 
-export const getServerSideProps : GetServerSideProps = async () => {
+export const getStaticProps : GetStaticProps = async () => {
   
   try {
     const response = await client.getEntries({
@@ -18,7 +18,8 @@ export const getServerSideProps : GetServerSideProps = async () => {
     return {
       props: {
         events: response.items
-      }
+      },
+      revalidate: 64000   
     }
   } catch (error) {
     console.error('Error fetching events:', error)
