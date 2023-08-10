@@ -18,9 +18,13 @@ const Header = (
 ) => {
 
   const [timeLeft, setTimeLeft] = useState('');
+  const [startDate , setStartDate] = useState('')
+  const [endDate , setEndDate] = useState('')
+
 
   useEffect(() => {
-
+    setStartDate(formatDateAndTime(upcomingEvent.fields.startDateAndTime as string))
+    setEndDate(formatDateAndTime(upcomingEvent.fields.endDateAndTime as string))
     const updateCounter : any = () => {
       const currentDate = new Date();
       const startDate = new Date(upcomingEvent.fields.startDateAndTime)
@@ -76,7 +80,7 @@ const Header = (
                   src={calendar}
                 />
                 <h3>
-                  {formatDateAndTime(upcomingEvent.fields.startDateAndTime)} - {formatDateAndTime(upcomingEvent.fields.endDateAndTime)}
+                  {startDate ? startDate : upcomingEvent.fields.startDateAndTime} - {endDate ? endDate : upcomingEvent.fields.endDateAndTime}
                 </h3>
               </div>
               <div className={styles.iconWrap}>
