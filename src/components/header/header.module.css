@@ -86,7 +86,6 @@
   align-items: center;
 }
 
-
 .iconWrap img{
   color : #fafafa !important;
   width: 2rem;
@@ -131,11 +130,33 @@
 
 .speakerWrap{
   width: 2rem;
+  position: relative;
   height: 2rem;
   border: 0.1vw solid white;
   border-radius: 50%;
 
 }
+
+.speakerWrap:hover{
+  border: 0.1vw solid #333;
+  cursor: pointer;
+}
+
+.speakerWrap:hover .speakerName{
+  display: block;
+}
+
+
+.speakerName{
+  position: absolute;
+  top: 2rem;
+  height: 2.25rem;
+  bottom: 0;
+  left: 0;  
+  display: none;
+  mix-blend-mode: difference;
+}
+
 
 .speakerWrap img {
   width: 100%;

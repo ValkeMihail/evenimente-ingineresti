@@ -109,6 +109,9 @@ const Header = (
                             height={20}
                             alt="speaker"
                           />
+                          <span className={styles.speakerName}>
+                            {speaker.fields.title}
+                          </span>
                         </div>
                       )
                     })
