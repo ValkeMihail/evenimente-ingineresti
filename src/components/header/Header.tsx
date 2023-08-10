@@ -21,18 +21,15 @@ const Header = (
 
   useEffect(() => {
 
-
     const updateCounter : any = () => {
       const currentDate = new Date();
       const startDate = new Date(upcomingEvent.fields.startDateAndTime)
       const timeDifference = startDate.getTime() - currentDate.getTime();
-
       if (timeDifference > 0) {
         const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
         const counterText = `${days}d   ${hours}h   ${minutes}m   ${seconds}s`;
         setTimeLeft(counterText);
       } else {
@@ -41,7 +38,6 @@ const Header = (
     };
     updateCounter(); 
     const counterInterval = setInterval(updateCounter, 1000);
-
     return () => {
       clearInterval(counterInterval); 
     };
@@ -52,9 +48,12 @@ const Header = (
       <div className={styles.headerLeft}>
         <Image
           className={styles.nextEventImage}
+          style={{
+            height: "100%",
+            width: "100%"
+          }}
           width={490}
-          height={300}
-          priority={true}
+          height={300}          
           alt="Next Event"
           src={upcomingEvent.fields.eventPhoto.fields.file.url ? "https:"+upcomingEvent.fields.eventPhoto.fields.file.url : eventPlaceholder}
         />
@@ -67,7 +66,6 @@ const Header = (
           <p>
             {upcomingEvent.fields.description}
           </p>
-
           <div className={styles.details}>
             <div className={styles.detailsWrap}>
               <div className={styles.iconWrap}>
@@ -113,7 +111,6 @@ const Header = (
               </div>
             </div>
           </div>
-
         </div>
         <div className={styles.actions}>
           <button className="button">

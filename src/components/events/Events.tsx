@@ -9,9 +9,6 @@ type EventsProps = {
   events: any
 }
 
-
-
-
 const Events = ({events} : EventsProps) => {
 
   return (
@@ -26,6 +23,10 @@ const Events = ({events} : EventsProps) => {
               <Image
                 width={490}
                 height={300}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
                 className={styles.eventImage}
                 alt='Next Event'
                 src={event.fields.eventPhoto?.fields.file.url ? ("https:" + event.fields.eventPhoto.fields.file.url) : eventPlaceholder}
