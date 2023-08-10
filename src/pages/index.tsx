@@ -48,9 +48,7 @@ export default function Home(
     <>
       <Head>
         <title>Evenimente Inginerești - Descoperă evenimente inginerești din Romania</title>
-        <meta name="description" content="
-          Descoperiți evenimente diverse, de la conferințe interactive și workshop-uri practice, până la prezentări de ultimă oră și discuții animate despre tendințele tehnologice emergente. Fiecare eveniment are scopul să vă ofere oportunități de învățare, networking și explorare a celor mai noi inovații. Alăturați-vă nouă pentru a vă conecta cu mentori, a împărtăși cunoștințe și a explora împreună viitorul fascinant al ingineriei.
-        " />
+        <meta name="description" content="Descoperiți evenimente diverse, de la conferințe interactive și workshop-uri practice, până la prezentări de ultimă oră și discuții animate despre tendințele tehnologice emergente. Fiecare eveniment are scopul să vă ofere oportunități de învățare, networking și explorare a celor mai noi inovații. Alăturați-vă nouă pentru a vă conecta cu mentori, a împărtăși cunoștințe și a explora împreună viitorul fascinant al ingineriei." />
         <meta name="keywords" content="evenimente, inginerie, romania, conferinte, workshop-uri, prezentari, discutii, tendinte, tehnologie, inovatii, networking, mentori, cunostinte, viitor, fascinant, inginerie" />
         <meta name="author" content="Evenimente Ingineresti" />
         <meta name='title' content='Evenimente Inginerești - Descoperă evenimente inginerești din Romania' />
