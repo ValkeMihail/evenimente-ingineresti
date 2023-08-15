@@ -35,10 +35,10 @@ const Header = (
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        const counterText = `${days}d   ${hours}h   ${minutes}m   ${seconds}s`;
+        const counterText = `${days}z   ${hours}h   ${minutes}m   ${seconds}s`;
         setTimeLeft(counterText);
       } else {
-        setTimeLeft('Event has already occurred!');
+        setTimeLeft("În desfășurare");
       }
     };
     updateCounter(); 
@@ -47,6 +47,12 @@ const Header = (
       clearInterval(counterInterval); 
     };
   }, []);
+
+
+  const handleTicket = () => {
+    window.open("https://www.iabilet.ro/", "_blank");
+  }
+
 
   return (
     <section className={styles.header}>
@@ -121,11 +127,11 @@ const Header = (
           </div>
         </div>
         <div className={styles.actions}>
-          <button className="button">
-            Participă
+          <button onClick={handleTicket} className="button">
+            Bilete
           </button>          
           <div className={styles.counter}>
-            {timeLeft}
+            { timeLeft }
           </div>
         </div>
       </div>

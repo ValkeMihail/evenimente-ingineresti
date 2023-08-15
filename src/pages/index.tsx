@@ -42,8 +42,12 @@ export default function Home(
     const sortedEventsByDate = events.sort((a : EventType, b : EventType) => {
       return new Date(a.fields.startDateAndTime).getTime() - new Date(b.fields.startDateAndTime).getTime()
     })
-    const upcomingEvent = sortedEventsByDate[0]
-    const restOfEvents = sortedEventsByDate.slice(1)
+    const futureEvents = sortedEventsByDate.filter((event : EventType) => {
+      return new Date(event.fields.startDateAndTime).getTime() > new Date().getTime()
+    })
+
+    const upcomingEvent =futureEvents[0]
+    const restOfEvents = futureEvents.slice(1)
   return (
     <>
       <Head>

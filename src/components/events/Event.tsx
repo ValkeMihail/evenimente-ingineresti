@@ -17,6 +17,10 @@ const Event = ({event} : {event : EventType}) => {
     setEndDate(formatDateAndTime(event.fields.endDateAndTime))
   }, [])
 
+  
+  const handleTicket = () => {
+    window.open("https://www.iabilet.ro/", "_blank");
+  }
 
 
   return (
@@ -46,6 +50,7 @@ const Event = ({event} : {event : EventType}) => {
           {event.fields.city} , {event.fields.country}
         </h4>
         <Image
+          onClick={handleTicket}
           width={4}
           height={4}
           className={styles.arrow}
